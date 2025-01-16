@@ -5,20 +5,22 @@ import pytest
 
 import fastbase64
 
+N = 4096
+
 
 @pytest.fixture(scope="session")
 def example():
-    return randbytes(128)
+    return randbytes(N)
 
 
 @pytest.fixture(scope="session")
 def standard_encoded():
-    return base64.standard_b64encode(randbytes(128))
+    return base64.standard_b64encode(randbytes(N))
 
 
 @pytest.fixture(scope="session")
 def urlsafe_encoded():
-    return base64.urlsafe_b64encode(randbytes(128))
+    return base64.urlsafe_b64encode(randbytes(N))
 
 
 @pytest.mark.benchmark(group="standardb64_encode")

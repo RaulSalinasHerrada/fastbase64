@@ -37,7 +37,7 @@ mod fastbase64 {
 
         match general_purpose::STANDARD.encode_slice(input, &mut buf) {
             Ok(written) => Ok(PyBytes::new(py, &buf[..written]).into()),
-            Err(e) => return Err(PyTypeError::new_err(e.to_string())),
+            Err(e) =>  Err(PyTypeError::new_err(e.to_string())),
         }
     }
 
@@ -54,7 +54,7 @@ mod fastbase64 {
 
         match general_purpose::URL_SAFE.encode_slice(input, &mut buf) {
             Ok(written) => Ok(PyBytes::new(py, &buf[..written]).into()),
-            Err(e) => return Err(PyTypeError::new_err(e.to_string())),
+            Err(e) =>  Err(PyTypeError::new_err(e.to_string())),
         }
     }
 
@@ -68,7 +68,7 @@ mod fastbase64 {
 
         match general_purpose::STANDARD.decode_slice(input, &mut buf) {
             Ok(written) => Ok(PyBytes::new(py, &buf[..written]).into()),
-            Err(e) => return Err(PyTypeError::new_err(e.to_string())),
+            Err(e) =>  Err(PyTypeError::new_err(e.to_string())),
         }
     }
 
@@ -82,7 +82,7 @@ mod fastbase64 {
 
         match general_purpose::URL_SAFE.decode_slice(input, &mut buf) {
             Ok(written) => Ok(PyBytes::new(py, &buf[..written]).into()),
-            Err(e) => return Err(PyTypeError::new_err(e.to_string())),
+            Err(e) =>  Err(PyTypeError::new_err(e.to_string())),
         }
     }
 }
