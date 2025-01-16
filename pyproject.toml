@@ -1,0 +1,22 @@
+[project]
+name = "fastbase64"
+version = "0.1.0"
+description = "Python  Bindings to the base64 package"
+authors = [
+    {name = "Raul Salinas",email = "rasalina@uc.cl"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = []
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"

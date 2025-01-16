@@ -1,0 +1,29 @@
+[package]
+name = "fastbase64"
+version = "0.1.0"
+authors = ["Raul Salinas <raul.antonio.salinas.herrada@gmail.com>"]
+edition = "2021"
+license = "BDS3"
+description = "Python bindings to Rust's base64 library."
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "fastbase64"
+crate-type = ["cdylib"]
+
+[dependencies]
+base64 = "0.22.1"
+
+[dependencies.pyo3]
+version = "0.23.3"
+features = ["extension-module"]
+
+[dependencies.tinyvec]
+version = "1.8.1"
+features = ["alloc"] 
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+opt-level = 3
