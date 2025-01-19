@@ -1,11 +1,9 @@
 import base64
 from random import randbytes
-
 import pytest
-
 import fastbase64
 
-N = 512
+N = 1024
 
 
 @pytest.fixture(scope="session")
@@ -24,22 +22,22 @@ def urlsafe_encoded():
 
 
 @pytest.mark.benchmark(group="standardb64_encode")
-def test_base_standard(benchmark, example):
+def test_base_standard_encode(benchmark, example):
     benchmark(base64.standard_b64encode, example)
 
 
 @pytest.mark.benchmark(group="standardb64_encode")
-def test_fast_standard(benchmark, example):
+def test_fast_standard_encode(benchmark, example):
     benchmark(fastbase64.standard_b64encode, example)
 
 
 @pytest.mark.benchmark(group="urlsafeb64_encode")
-def test_base_urlsafe(benchmark, example):
+def test_base_urlsafe_encode(benchmark, example):
     benchmark(base64.urlsafe_b64encode, example)
 
 
 @pytest.mark.benchmark(group="urlsafeb64_encode")
-def test_fast_urlsafe(benchmark, example):
+def test_fast_urlsafe_encode(benchmark, example):
     benchmark(fastbase64.urlsafe_b64encode, example)
 
 
