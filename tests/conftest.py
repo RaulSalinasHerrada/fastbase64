@@ -1,4 +1,5 @@
 import os
+
 from hypothesis import Verbosity, settings
 
 settings.register_profile("ci", max_examples=2000)

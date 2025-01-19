@@ -1,6 +1,8 @@
 import base64
 from random import randbytes
+
 import pytest
+
 import fastbase64
 
 N = 1024
