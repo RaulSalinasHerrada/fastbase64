@@ -5,7 +5,7 @@ import pytest
 
 import fastbase64
 
-N = 4096
+N = 512
 
 
 @pytest.fixture(scope="session")

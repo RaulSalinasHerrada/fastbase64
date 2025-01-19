@@ -19,11 +19,7 @@ base64 = "0.22.1"
 version = "0.23.3"
 features = ["extension-module"]
 
-[dependencies.tinyvec]
-version = "1.8.1"
-features = ["alloc"] 
-
 [profile.release]
-lto = "fat"
+lto = true
 codegen-units = 1
 opt-level = 3
