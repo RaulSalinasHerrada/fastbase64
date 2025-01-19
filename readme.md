@@ -12,7 +12,6 @@ For now the library only supports bytes on standard/urlsafe base64 encoding and 
 
 # Usage
 
-
 ```python
 import fastbase64
 import base64 
