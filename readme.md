@@ -1,6 +1,6 @@
 # fastbase64 (WIP)
 
-FastBase64 is a library which provides CPython bindings to Rust's Base64 library. The provided API is exactly as Python's builtin UUID class.
+FastBase64 is a library which provides CPython bindings to the Rust's Base64 library. The provided API is exactly as Python's builtin base64 class.
 
 Currently supported on Python 3.10, 3.11, 3.12, & 3.13.
 
