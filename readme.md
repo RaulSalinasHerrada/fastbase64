@@ -19,4 +19,8 @@ import base64
 example = b'hello world!'
 
 assert base64.standard_b64encode(example) == fastbase64.standard_b64encode(example)
+
+encoded = "SXQgY2FuIGRlY29kZSB0b28h"
+
+assert fastbase64.standard_b64decode(encoded) == b"It can decode too!"
 ```
