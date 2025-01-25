@@ -1,10 +1,10 @@
 [project]
 name = "fastbase64"
 version = "0.1.0"
-description = "Python Bindings to the base64 package"
+description = "Python Bindings to the Rust's Base64 package"
 authors = [{name = "Raul Salinas",email = "rasalina@uc.cl"}]
 license = "BSD3"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = []
 
 [tool.black]
